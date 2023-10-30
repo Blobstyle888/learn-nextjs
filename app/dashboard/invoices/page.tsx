@@ -8,6 +8,8 @@ import { Suspense } from "react";
 
 import { fetchInvoicesPages } from "@/app/lib/data";
 
+import { Metadata } from "next";
+
 type SearchParamsProps = {
   query?: string;
   page?: string;
@@ -15,6 +17,10 @@ type SearchParamsProps = {
 
 type InvoicesParamsProps = {
   searchParams?: SearchParamsProps;
+};
+
+export const metadata: Metadata = {
+  title: "Invoices",
 };
 
 export default async function Page({ searchParams }: InvoicesParamsProps) {
